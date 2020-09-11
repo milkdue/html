@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位</title>
+
+    <!-- 
+        绝对定位 
+            将position的值设定为absolute值就开启了绝对定位
+                绝对定位的特点:
+                    不设置偏移量 元素的位置就不会发生变化
+                    元素会从文档流中脱离
+                    会改变元素的属性 行内变成块 默认高度被内容撑开
+                    会使元素提升一个层级
+                    相对于其包含块进行定位的
+
+        包含块(containing block)
+            包含快是距离它最近的祖先块元素
+
+        绝对定位包含块
+            绝对定位包含块是距离它最近的开启了定位(其值不是static)的祖先块元素
+            如果祖先块元素都没有开启定位 则选择根元素作为包含块
+
+        根元素(html)也叫初始包含块
+    -->
+    <style>
+        .box1,.box2,.box3{
+            width:200px;
+            height:200px;
+        }
+
+        .box1{
+            background-color:red;
+        }
+
+        .box4{
+            width:400px;
+            height:400px;
+            background-color:cornflowerblue;
+            position:relative;
+        }
+
+        .box5{
+            width:300px;
+            height:300px;
+            background-color:rgb(39, 216, 98);
+            /* position:relative; */
+        }
+
+        .box2{
+            background-color:green;
+            position:absolute ;
+            right:0px;
+            top:0px;
+        }
+
+        .box6{
+            width:100px;
+            height:100px;
+            background-color:rgb(221, 149, 14);
+        }
+        
+        .box3{
+            background-color:brown;
+        }
+
+        
+
+    </style>
+
+</head>
+<body>
+    <div class="box1"></div>
+        <div class="box4">
+            <div class="box5">
+                <div class="box2"></div>
+                <div class="box6"></div>
+            </div>
+        </div>
+    </div>
+    <div class="box3"></div>
+</body>
+</html>

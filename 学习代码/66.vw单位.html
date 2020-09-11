@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vw单位</title>
+    <!-- 
+        不同的设备完美视口的大小是不一样的
+        
+        由于不同设备视口和像素比不同 所以同样的375px在不同的设备下意义是不一样的
+
+        在移动端开发就不能使用px进行布局了
+
+        vw表示的是视口的宽度
+            100vw   =   一个视口的宽度
+            1vw     =   1%视口的宽度
+
+        vw这个单位总是相当于视口宽度进行计算
+
+        设计图的宽度
+            750px 1125px  都是375的倍数 两倍图 三倍图
+        使用vw作为单位
+            以750px为设计图的宽度
+                元素的宽度/750 vw
+            100/750=0.133333333333vw/px
+        
+        vw适配
+            设置html的字体大小 40倍的0.133333333vw/px
+            字体大小最小为12px  小于12px浏览器自动调整为12px（谷歌浏览器） 但是可以为0
+            1rem= 40 * 0.1333333333vw/px
+     -->
+</head>
+<body>
+    
+</body>
+</html>

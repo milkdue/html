@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <!-- 
+        弹性容器上的样式
+            flex-wrap:
+                设置弹性元素是否在弹性容器中自动换行
+                可选值：
+                    nowrap              默认值 不换行
+                    wrap                弹性元素沿着辅轴方向换行
+                    wrap-reverse        沿着辅轴反方向换行
+            
+            flex-flow:
+                wrap和direction的简写属性
+                    flex-flow:row wrap;
+            
+            justify-content:
+                如何分配主轴上的空白空间--主轴上的元素如何排列
+                    可选值
+                        flex-start      从主轴的起点排列
+                        flex-end        从主轴的终点排列
+                        center          分布在中间
+                        space-around     空白分布在元素两侧
+                        space-evenly    空白分布在元素的单侧
+                        space-between   空白分布在中间元素的两侧
+            
+            align-items:
+                元素在辅轴上如何对齐
+                    可选值
+                        stretch     默认值将元素的长度设置为相同的值
+                        flex-start  元素不会拉伸沿着辅轴起点排列
+                        flex-end    同上
+                        center      居中对齐
+                        baseline    基线对齐
+
+            align-content
+                元素在辅轴方向空白空间的分布
+                        flex-start      从辅轴的起点排列
+                        flex-end        从辅轴的终点排列
+                        center          分布在中间
+                        space-around     空白分布在元素两侧
+                        space-evenly    空白分布在元素的单侧
+                        space-between   空白分布在中间元素的两侧
+
+            弹性元素上的样式
+                align-self:
+                用来覆盖弹性容器上的align-items
+
+     -->
+
+     <style>
+         .box{
+             width:600px;
+             height:800px;
+             border:10px red solid;
+             font-size:24px;
+             text-align:center;
+             display:flex;
+             flex-direction:row;
+             flex-wrap:wrap;
+             /* justify-content:flex-start; */
+             justify-content:space-between;
+             align-items:center;
+         }
+
+         .box1,.box2,.box3,.box4,.box5{
+             width:200px;
+             line-height: 100px;
+             /* flex-shrink:0; */
+         }
+
+         .box1{
+             background-color:blue;
+             /* flex-grow:1; */
+             align-self:stretch;
+         }
+
+         .box2{
+             background-color: coral;
+             /* flex-grow:2; */
+         }
+
+         .box3{
+             background-color: darkgreen;
+             /* flex-grow:3; */
+         }
+
+         .box4{
+             background-color: rgb(255, 0, 170);
+             /* flex-grow:3; */
+         }
+
+         .box5{
+             background-color: rgb(252, 143, 0);
+             /* flex-grow:3; */
+         }
+     </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">1</div>
+        <div class="box2">2
+            <div>2</div>
+        </div>
+        <div class="box3">3
+            <div>3</div>
+            <div>3</div>
+        </div>
+
+        <div class="box4">3
+            <div>3</div>
+            <div>3</div>
+        </div>
+        <div class="box5">3
+            <div>3</div>
+            <div>3</div>
+        </div>
+    </div>
+</body>
+</html>

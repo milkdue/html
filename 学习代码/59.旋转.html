@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变换平移</title>
+    <!-- 
+        z轴平移
+            translateZ()
+                调整z轴的距离 人眼到网页的距离 近大远小
+                默认情况下网页是不支持透视的 要看到效果 必须指定视距
+        旋转
+            transform:rotateX()
+            transform:rotateY()
+            transform:rotateZ()
+            绕着坐标轴旋转
+        旋转是否可以看到背面
+            backface-visibility:
+                可选值
+                    visible 默认值可以看到
+                    hidden  隐藏
+     -->
+    <style>
+        .box{
+            height:800px;
+            border:10px solid red;
+        }
+
+        .box1{
+            width:100px;
+            height:100px;
+            background-color:#bfa;
+            margin:350px auto;
+            transition:transform 2s;
+        }
+
+        .box:hover .box1{
+            /* transform:translateZ(500px); */
+            /* transform:rotateY(45deg) translateZ(200px); */
+            /* transform: translateZ(200PX) rotate(45deg); */
+            transform: rotateY(.5turn);
+            backface-visibility:hidden;
+        }
+
+        html{
+            /* 设置当前网页的视距 人眼到网页的距离 */
+            perspective:800px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1"></div>
+    </div>
+</body>
+</html>

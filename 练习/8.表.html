@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表</title>
+    <style>
+        .clock{
+            position:relative;
+            width:800px;
+            height:800px;
+            background-color:#bfa;
+            border-radius:50%;
+            margin:20px auto;
+            background-image: url(../img/biao.png);
+            background-size:cover;
+        }
+        .clock>div{
+            position:absolute;
+            left:0px;
+            right:0px;
+            bottom:0px;
+            top:0px;
+            margin:auto;
+        }
+
+        .clock .hour{
+            width:50%;
+            height:50%;
+            /* background-color:red; */
+            animation:clock 43200s linear infinite;
+        }
+        .clock .h{
+            height:50%;
+            width:8px;
+            margin:0px auto;
+            background-color:black;
+        }
+
+        .clock .min{
+            width:65%;
+            height:65%;
+            /* background-color:red; */
+            animation:clock 3600s linear infinite;
+        }
+
+        .clock .m{
+            height:50%;
+            width:6px;
+            margin:0px auto;
+            background-color:black;
+        }
+
+        .clock .ms{
+            width:80%;
+            height:80%;
+            /* background-color:red; */
+            animation:clock 60s steps(60) infinite;
+        }
+
+        .clock .s{
+            height:50%;
+            width:4px;
+            margin:0px auto;
+            background-color:red;
+        }
+
+        @keyframes clock{
+            from{
+                transform:rotateZ(0deg);
+            }
+            to{
+                transform:rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="hour">
+            <div class="h"></div>
+        </div>
+        <div class="min">
+            <div class="m"></div>
+        </div>
+        <div class="ms">
+            <div class="s"></div>
+        </div>
+    </div>
+</body>
+</html>

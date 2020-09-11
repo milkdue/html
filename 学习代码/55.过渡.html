@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过渡</title>
+    <!-- 
+        过渡（transition）
+            通过过渡可以指定一个属性发生变化时的切换方式
+            
+        transition-property:指定要执行过渡的属性
+            多个属性间使用，隔开
+            如果所有属性都需要过渡 可以使用all关键字
+            大部分过渡属性都支持过渡效果 注意过渡必须是一个有效数值向另一个有效数值进行过渡 auto不可以用于过渡
+
+        transition-duration 设置过渡的时间
+            时间单位：s和ms     1000ms = 1s
+        
+        transition-timing-function:过渡的时间函数
+            指定过渡的执行方式
+                可选值：
+                    ease            默认值 慢速开始 先加速 再减速
+                    linear          匀速
+                    ease-in         加速    慢速进入 加速
+                    ease-out        减速    慢速出去 减速
+                    ease-in-out     先减速 后减速
+                    cubic-bezier()  贝塞尔曲线指定速度
+                    steps()          分步执行过渡效果
+                        可以设置一个第二个值
+                        end     在时间结束时执行过渡 默认值
+                        start   在时间开始执行过渡
+
+            
+        transition-delay:过渡的延时 等待一段时间在执行过渡
+
+        transition可以同时设置过渡的相关属性 只有一个顺序要求 如果有延时属性 延时必须在过渡时间的后面
+     -->
+    <style>
+        .box{
+            width:500px;
+            height:500px;
+            background-color:silver;
+        }
+
+        .box div{
+            width:100px;
+            height:100px;
+            background-color:red;
+            margin-bottom:200px;
+            margin-left:0px;
+            transition-property:width,margin-left;
+            transition-duration:2s,3s;
+            /* transition:all 1s; */
+        }
+
+        .box .box2{
+            background-color:skyblue;
+            transition-delay:1s;
+
+        }
+
+        .box:hover div{
+            width:150px;
+            margin-left:400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

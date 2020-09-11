@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垂直布局</title>
+
+    <!-- 
+        overflow
+            子元素在父元素的内容区内排列
+                如果子元素的大小超过了父元素 那么就会出现溢出
+
+            使用overflow属性来设置父元素如何处理溢出的子元素
+
+            可选值
+                visible 默认值 子元素在父元素的外部显示
+                hidden  溢出的内容将会被裁剪不会显示
+                scroll  生成两条滚动条 通过滚动条来查看完整的内容
+                auto    根据需要生成滚动条
+
+            overflow-x  处理x方向的溢出
+            overflow-y  处理y方向的溢出
+            值都一样
+
+    -->
+
+    <style>
+        .box1{
+            background-color:#fba
+            /* 不设置高度 默认被内容撑开 */
+        }
+
+        .box2,.box3,.box5{
+            width:200px;
+            height:100px;
+            overflow:auto;
+            background-color:red;
+        }
+
+        .box2{
+            background-color:black;
+            margin-bottom:20px;
+        }
+
+        .box3{
+            background-color:brown;
+        }
+
+        .box4{
+            margin-top:50px;
+            height:80px;
+            background-color:#fba       
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+
+    <div class="box4">
+        <div class="box5">的JavaScript 运行时jian的我的·捏·1加加加222范德萨发你发快照子元素在父元素的内容区内排列
+            如果子元素的大小超过了父元素 那么就会出现溢出
+
+        使用overflow属性来设置父元素如何处理溢出的子元素
+
+        可选值
+            visible 默认值 子元素在父元素的外部显示
+            hidden  溢出的内容将会被裁剪不会显示
+            scroll  生成两条滚动条 通过滚动条来查看完整的内容
+            auto    根据需要生成滚动条</div>
+    </div>
+
+
+</body>
+</html>

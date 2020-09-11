@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>边框</title>
+
+    <!-- 
+        边框 
+            border-width    
+                可以省略 默认值一般是3个像素
+                可以用来指定4个方向的宽度 从最上方顺时针一一对应
+                    值的情况
+                        四个值：上 右 下 左
+                        三个值：上 左右 下
+                        两个值：上下 左右
+                        一个值：上下左右
+
+            border-xxx-width
+                为四个方向单独指定宽度
+                xxx
+                    top     上面
+                    right   右面
+                    botton  下面
+                    left    左面
+
+
+            border-color
+                可以省略 默认值是前景色color 如果不设置color  color默认值为black
+                为边框指定颜色 可以为四个边框分别指定颜色   规则和width一样
+                同样也可以使用border-xxx-color为四个边框单独设置颜色
+
+            border-style
+                不可以省略 默认值为none 就是没有边框
+                为边框指定样式
+                同样可以使用border-xxx-style单独指定样式
+                    值的情况
+                        solid       实线段
+                        dotted      点状虚线
+                        dashed      虚线
+                        double      双线
+
+            以上一般不用
+                一般使用border:宽度 颜色 样式       值得顺序无影响
+
+                同样也可以使用border-xxx单独设置样式
+
+    -->
+
+
+    <style>
+        .box1{
+        width:200px;
+        height:200px;
+        background-color:red;
+
+        border-width:10px 20px 30px 40px;
+        border-top-width:50px;
+        border-color:orange blue purple black;
+        border-style:solid;
+
+        border:blue 10px solid;
+        border-right:none;
+    }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

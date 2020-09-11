@@ -1,0 +1,67 @@
+/*
+    变量可以存储一个任意的值
+    并且可以随时更改这个值
+    变量的声明:@变量名:值;
+    应用:@变量名
+
+    作为类名或者一部分值使用时 语法
+    @{变量名}
+
+    发生变量重名时 下面的会覆盖掉上面的值
+    $使用其他值
+
+    &表示外层元素 
+    所有与伪类 伪元素相关的样式一般都会使用&
+    在使用嵌套的时候 要注意 合理的嵌套
+    一旦发现有定义比较特殊的class或者id的情况 可以单独拿来写
+
+    extend  继承样式
+    也可以使用类名直接扩展 但不推荐
+
+    使用类选择器在后面加上括号 相当于创建了一个mixin
+    这个mixin在css中不会显示
+
+    less可以使用基本算数运算
+*/
+.box {
+  width: 200px;
+  height: 300px;
+  background-color: red;
+}
+.box > .box1 {
+  width: 100px;
+  height: 100px;
+}
+.box > .box1:hover {
+  color: green;
+}
+div .box {
+  color: silver;
+}
+.box:hover {
+  color: red;
+}
+.box4 {
+  background-image: url("../img/1.png");
+}
+.p1,
+.p2 {
+  width: 1200px;
+  height: 500px;
+}
+.p2 {
+  color: red;
+}
+.p3 {
+  width: 1200px;
+  height: 500px;
+}
+.p5 {
+  width: 500px;
+  height: 600px;
+}
+.p6 {
+  width: 100px;
+  height: 200px;
+  color: red;
+}

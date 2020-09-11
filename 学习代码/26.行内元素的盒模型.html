@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内联元素的盒模型</title>
+
+    <!-- 
+        内联元素的盒模型
+            内联元素不支持设置宽度和高度
+            内联元素可以设置垂直内边距 但是不会影响垂直页面的布局
+            边框同上    margin同上 但水平相邻外边距没有发生重叠 而是相加
+
+        display用来设置显示的类型
+            可选值
+                inline          设置为行内元素
+                block           设置为块元素
+                inline-block    设置行内块元素
+                    既可以设置宽度 高度又可以不独占一行
+                table           将元素设置为一个表格
+                none            隐藏不显示  不占据位置
+
+        visibility用来设置显示的状态
+            可选值
+                visible         默认值  元素在网页中正常显示
+                hidden          元素在网页中隐藏不显示  但是仍然占据位置
+    -->
+
+    <style>
+        a{
+            display:none;
+            width:40px;
+            height:50px;
+            background-color:red;
+        }
+        .s1{
+            display:inline-block;
+            visibility:hidden;
+            width:200px;
+            height:200px;
+            padding:0px 0px 50px;
+            margin:0px 50px;
+            background-color:rgb(0, 247, 255);
+        }
+
+        .box1{
+            width:200px;
+            height:200px;
+            background-color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <a href="#javascript">超链接</a>
+    <span class="s1">我是span</span>
+    <span class="s1">我是span</span>
+    <div class="box1"></div>
+</body>
+</html>

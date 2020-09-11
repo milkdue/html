@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格</title>
+</head>
+<body>
+    <table border="1" width="50%" align="center">
+        <tr>                            <!-- tr表示表格的一行 -->
+            <td>A1</td>
+            <td>B1</td>                 <!-- td表示一个单元格 -->
+            <td>C1</td>
+            <td>D1</td>
+        </tr> 
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+            <td rowspan="2">D2</td>     <!-- rowspan表示纵向单元格合并 -->  
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td>B4</td>
+            <td colspan="2">C4</td>     <!-- colspan表示横向单元格合并 -->  
+        </tr>
+    </table>
+</body>
+</html>

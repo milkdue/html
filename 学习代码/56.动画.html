@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画</title>
+    <!--
+        动画必须指定关键帧
+        @keyframes 关键帧的名字{
+            from{
+                从哪开始
+            }
+
+            to{
+                到哪结束
+            }
+        }
+
+        animation-name:关键帧的名字
+            指定动画
+        animation-duration:时间
+            指定动画的时间
+        animation-iteration-count:
+            指定动画迭代的次数  迭代器
+            可选值
+                次数
+                infinite    无限次
+        animation-delay:时间
+            动画延迟的时间
+        animation-timing-function:
+            指定时间的函数与transition-timing-function的值一样
+        animation-direction:
+            指定动画的方向
+            可选值：
+                normal      正序   默认值from-to每次都是这样
+                reverse     逆序
+                alternate   动画轮流反向播放
+        animation-play-state
+            控制动画的播放状态
+                可选值
+                    running     默认值 播放
+                    paused      停止
+        animation-fill-mode
+            规定动画时间之外的状态 填充模式
+                可选值
+                    none        默认值 不改变默认状态
+                    forwards    当动画完成时保持to的状态
+                    backwards   动画开始时保持from的状态    完成后保持初始状态  不是from的状态
+                    both        二者结合 开始时保持from的状态   完成后保持to的状态
+        简写
+            animation:
+                除了延迟在动画时间的后面 没有顺序要求
+
+    -->
+    <style>
+        .box1{
+            width:800px;
+            height:800px;
+            background-color:silver;
+        }
+
+        .box1 div{
+            width: 100px;
+            height:100px;
+            margin-left:0px;
+            background-color:red;
+            animation-name:test;
+            animation-duration:2s;
+            animation-iteration-count:1;
+            animation-delay:1s;
+            animation-direction:alternate;
+            animation-play-state:running;
+            /* animation-fill-mode:both; */
+            animation:test 2s infinite 1s alternate running;
+        }
+
+        
+
+        @keyframes test{
+            from{
+                margin-left:200px;
+            }
+            
+            to{
+                margin-left:700px;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div></div>
+    </div>
+</body>
+</html>

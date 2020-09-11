@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景</title>
+    <!-- 
+        background-color    设置背景颜色
+        background-image    设置背景图片
+        background-repeat   设置背景重复方式
+            可选值
+                repeat      默认值  沿着x y双向重复
+                repeat-x    沿着x方向重复
+                repeat-y
+                no-repeat
+
+        background-position
+            设置方式
+                通过left    right   top     bottom      center设置位置
+                    使用时必须指定两个值    background-position:left top;  
+                    如果只写一个  第二个值默认是center
+
+                    通过偏移量来设置位置
+                        水平偏移量  垂直偏移量
+    
+    -->
+    <style>
+        div{
+            /* width:1920px; */
+            height:1080px;
+            background-color:#bfa;
+            background-image: url("../img/图片列表/1.webp");
+            background-repeat:no-repeat;
+            background-position:left bottom;
+            background-position:100px 200px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

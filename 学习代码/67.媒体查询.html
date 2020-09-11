@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒体查询</title>
+    <!-- 
+        响应式布局
+            网页可以根据不同的设备或窗口大小呈现不同的效果
+            使用响应式布局 可以使一个网页适用于所有设备
+            响应布局的关键就是媒体查询
+            通过媒体查询 可以为不同的设备 或设备的不同的状态来分别设置样式
+
+        @media
+            使用媒体查询
+            @media 查询规则{}
+                媒体类型
+                    all         所有设备
+                    print       打印设备
+                    screen      显示设备
+                    speech      屏幕阅读器
+            
+            @media print,speech
+                可以使用逗号链接多个媒体类型    表示或
+                可以使用and链接多个媒体类型     表示与
+                可以使用only表示仅仅    为了兼容老版本浏览器
+                可以使用not表示除了
+     -->
+     <style>
+         @media print,speech{
+             body{
+                 background-color: red;
+             }
+         }
+     </style>
+</head>
+<body>
+    
+</body>
+</html>

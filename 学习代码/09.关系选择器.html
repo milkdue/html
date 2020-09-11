@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关系选择器</title>
+
+    <!-- <style>
+        div.d1 > span{
+            color:red;
+        }
+    </style> -->
+
+    <!-- <style>
+        div span{
+            color:red;
+        }
+    </style> -->
+
+    <!-- <style>
+        p + span{
+            color:green;
+        }
+    </style> -->
+
+    <style>
+        p ~ span{
+            color:orange;
+        }
+    </style>
+
+
+    <!-- 
+        关系（二叉树）
+            父子
+                父元素：直接包含子元素的元素
+                子元素：直接被父元素包含的元素
+            祖先 
+                祖先元素：直接或间接包含后代元素的元素
+                后代元素：直接或间接被祖先元素包含的元素
+            兄弟
+                兄弟元素：拥有同一个父元素的元素
+
+            子元素选择器
+                选择指定父元素元素的指定子元素
+                父元素 > 子元素{}
+                选择器可以复合使用
+            
+            后代选择器
+                选中指定元素的指定后代元素
+                祖先 后代{}
+            
+            兄弟选择器
+                选择下一个兄弟
+                    前一个 + 后一个{}
+                    必须是紧挨着的
+                选择下面的所有的指定兄弟元素
+                    兄 ~ 第{}
+    -->
+</head>
+<body>
+    <div class="d1">
+        <p>
+            我是div中的p元素
+            <span>我是p中的span元素</span>
+        </p>
+        <span>我是div中的span元素</span>
+        <span>我是div中的span元素</span>
+    </div>
+
+    <div>
+        <span>我是div中的元素</span>
+    </div>
+</body>
+</html>

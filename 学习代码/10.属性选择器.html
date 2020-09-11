@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+
+    <!-- <style>
+        p[title]{
+            color:red;
+        }
+
+        /* *[title]{
+            color:red;
+        } */
+    </style> -->
+
+    <!-- <style>
+        p[title=p11]{
+            color:red;
+        }
+    </style> -->
+
+    <!-- <style>
+        p[title^=p11]{
+            color:red;
+        }
+    </style> -->
+
+    <!-- <style>
+        p[title$=a1]{
+            color:red;
+        }
+    </style> -->
+
+    <style>
+        p[title*=a]{
+            color:red;
+        }
+    </style>
+    <!-- 
+        属性选择器
+            选中指定属性的元素
+            [属性名]{}
+            可以复合
+
+            选中指定属性的指定属性值的元素
+            [属性名=属性值]
+            
+            选中属性值以指定值开头的元素
+            [属性名^=属性值]
+
+            选中属性值以指定值结尾的元素
+            [属性名$=属性值]
+
+            选中属性值中含有指定值的元素
+            [属性名*=属性值]
+
+            属性值不能以数字开头
+    -->
+</head>
+<body>
+    <p title="p11111a1">滕王高阁临江渚，佩玉鸣鸾罢歌舞。</p>
+    <p title="p12221a1">画栋朝飞南浦云，珠帘暮卷西山雨。</p>
+    <p title="p113311">闲云潭影日悠悠，物换星移几度秋。</p>
+    <p title="p1a14">闲云潭影日悠悠，物换星移几度秋。</p>
+    <p title="p215">闲云潭影日悠悠，物换星移几度秋。</p>
+    <p title="p216">闲云潭影日悠悠，物换星移几度秋。</p>
+    <p title="p23">闲云潭影日悠悠，物换星移几度秋。</p>
+    <p>阁中帝子今何在？槛外长江空自流。</p>
+</body>
+</html>

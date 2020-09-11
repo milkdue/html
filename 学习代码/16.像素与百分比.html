@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>像素与百分比</title>
+
+    <!-- 
+        像素与百分比
+
+            百分比可以使得子元素跟随父元素改变而改变
+
+            px  像素
+            em  =1 font-size
+            rem 相对于根元素的字体大小来改变
+
+    -->
+
+    <style>
+        html{
+            font-size:20px;
+        }
+        .box1{
+            background-color:blue;
+            width:300px;
+            height:300px;
+        }
+
+        .box2{
+            background-color:red;
+            width:50%;
+            height:50%;
+        }r
+
+        .box3{
+            width:10rem;
+            height:10rem;
+            font-size:30px; 
+            background:purple;
+            /* width:10em;r
+            height:10em; */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+
+    <div class="box3"></div>
+</body>
+</html>

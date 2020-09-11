@@ -1,0 +1,90 @@
+/*
+    变量可以存储一个任意的值
+    并且可以随时更改这个值
+    变量的声明:@变量名:值;
+    应用:@变量名
+
+    作为类名或者一部分值使用时 语法
+    @{变量名}
+
+    发生变量重名时 下面的会覆盖掉上面的值
+    $使用其他值
+
+    &表示外层元素
+
+    extend  继承样式
+    也可以使用类名直接扩展 但不推荐
+
+    使用类选择器在后面加上括号 相当于创建了一个mixin
+    这个mixin在css中不会显示
+
+    less可以使用基本算数运算
+*/
+@a:200px;
+@b:300px;
+@c:red;
+@d:box2;
+@e:img;
+@d:box4;
+
+.box{
+    width:@a;
+    height:@b;
+    background-color:@c;
+
+    >.box1{
+        width:100px;
+        height:$width;
+
+        &:hover{
+            color:green;
+        }
+    }
+
+    div &{
+        color:silver;
+    }
+
+    &:hover{
+        color:@c;
+    }
+}
+.@{d}{
+    background-image:url("../@{e}/1.png")
+}
+
+.p1{
+    width:600px * 2;
+    height:500px;
+}
+
+.p2:extend(.p1){
+    color:red;
+}
+
+.p3{
+    .p1;//可以加括号.p1(); 相当于复制   也叫mixin混合
+}
+
+.p4(){
+    width: 500px;
+    height:600px;
+}
+
+.p5{
+    .p4();//可以不写括号
+}
+//混合函数值传递
+.test(@a, @b, @c:red){
+    width:@a;
+    height:@b;
+    color:@c;
+}
+
+.p6{
+    // .test(100px, 200px, red);
+    .test(@a:100px, @c:red, @b:200px);
+    // 可以不按顺序传递 但需要键值对应
+    .test(100px, 200px);
+    // 对有默认值的函数可以不传
+}

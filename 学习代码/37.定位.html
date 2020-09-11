@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相对定位</title>
+
+    <!-- 
+        定位（position）
+            定位是一种更加高级的布局方式
+            通过定位可以将元素放在页面的任意位置
+            通过position属性来设置定位
+                可选值：
+                    static      默认值  不开启定位
+                    relative    开启元素的相对定位
+                    absolute    开启元素的绝对定位
+                    fixed       开启元素的固定定位
+                    sticky      开启元素的粘滞定位
+
+            相对定位
+                将position属性值设置为relative即可开启元素的相对定位
+                特点：
+                    如果不设置偏移量 元素不发生变化
+                    相对定位是参照元素在文档流中的位置定位的    x y轴坐标
+                    相对定位可以提高元素的层次
+                    相对定位不会使元素脱离文档流
+                    相对定位不改变元素的性质 块还是块 行内还是行内
+
+                偏移量
+                    top     
+                        定位元素与定位位置上面的距离
+                    bottom
+                        定位元素与定位位置下面的距离
+                    left
+                        定位元素与定位位置左边的距离
+                    right
+                        定位元素与定位位置右边的距离
+
+    -->
+
+
+    <style>
+        .box1,.box2,.box3{
+            width:200px;
+            height:200px;
+        }
+
+        .box1{
+            background-color:red;
+        }
+
+        .box2{
+            background-color:green;
+            position:relative;
+            left:200px;
+            top:-200px;
+        }
+        
+        .box3{
+            background-color:brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

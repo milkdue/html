@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变形平移</title>
+    <!-- 
+        居中的两种方式
+        设置绝对定位
+            1.left right top bottom 全部为0 margin:auto 只适合宽高固定
+            2.利用变形 left top 为50% transform:translateX(50%) translateY(50%)
+
+        变形
+            transform:
+                值
+                    translateX()
+                    translateY()
+                    translateZ()
+                都是平移元素    方向    百分比平移相当于自身
+            
+            
+     -->
+    <style>
+        .box{
+            position:relative;
+            height:800px;
+            width:100%;
+            background-color:rgb(231, 231, 231);
+        }
+        .box1{
+            background-color:skyblue;
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translateX(50%) transformY(50%);
+        }
+
+        .box div{
+            float:left;
+            width: 200px;
+            height:300px;
+            margin:20px 20px;
+            background-color:white;
+            transition:transform .3s;
+        }
+
+        .box2:hover,
+        .box3:hover{
+            transform:translateY(-5px);
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, .3);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span class="box1">aa</span>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

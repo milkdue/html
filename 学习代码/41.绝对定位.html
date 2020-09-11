@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位</title>
+
+    <!-- 
+        水平布局 
+            left+margin-left+border-left+padding-left+width+padding-right+border-right+margin-right+right=包含块的宽度
+            
+            在使用绝对定位后 水平布局就要绝对满足这这个等式
+
+            如果不满足等式发生过渡约束
+                如果九个值都没有auto那么浏览器就会自动调整right的值让等式成立
+
+                可以指定auto的属性:
+                    left
+                    margin-left
+                    width
+                    margin-right
+                    right
+                
+                指定哪一个为auto就会调整哪一个使得等式满足
+                默认left和right是auto 如果不知道left和right的值 并有多个auto默认调整这两个使得等式成立
+
+        垂直布局
+            top+margin-top/bottom+border-top/bottom+padding-top/bottom+height+bottom=包含块的高度
+                auto同理
+    -->
+
+    <style>
+        .box1{
+            width:500px;
+            height:500px;
+            background-color:#bfa;
+            position:relative;
+        }
+
+        .box2{
+            width:100px;
+            height:100px;
+            margin:auto;
+            background-color:red;
+            position:absolute;
+            left:0px;
+            right:0px;
+            bottom:0px;
+            top:0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

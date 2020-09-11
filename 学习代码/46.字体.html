@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本</title>
+
+    <!-- 
+        text-align 文本水平对齐 
+            可选值
+                left
+                right
+                center
+                justify     两侧对齐
+
+        vertical-align  设置元素垂直对齐
+            可选值
+                baseline    基线对齐
+                top
+                bottom      
+                middle      居中对齐
+
+        图片默认是基线对齐 会留有缝隙
+            可以用除了基线对齐的任意值去除缝隙
+
+        text-decoration 设置文本修饰
+            可选值
+                none            无修饰
+                underline       下划线
+                line-through    删除线
+                overline        上划线
+        
+        white-space     设置网页如何处理空白
+            可选值
+                normal      默认
+                nowrap      不换行
+                pre         保留空白
+    -->
+
+    <style>
+        p{
+            border:2px red solid;
+            text-align:center;
+        }
+
+        div{
+            border:1px yellow solid;
+        }
+
+        img{
+            vertical-align:bottom;
+        }
+
+        nav{
+            width:500px;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+
+        }
+    </style>
+</head>
+<body>
+    <p>
+        hello hello hello
+    </p>
+    <div>
+        <img src="../img/图片列表/1.webp" alt="1">
+    </div>
+    <nav>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem explicabo quas fugiat exercitationem nihil pariatur cumque qui aliquid! Perspiciatis consequatur natus optio vel eius iusto adipisci dolorum nobis facilis doloribus?
+    </nav>
+    
+    
+</body>
+</html>

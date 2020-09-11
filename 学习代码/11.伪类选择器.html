@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+
+    <!-- 
+        伪类
+        特殊的类 不存在的类 用来描述元素的特殊状态
+        伪类一般用:开头
+        :first-child    第一个子元素
+        :last-child     最后一个子元素
+        :nth-child()    特殊值
+                        n  从第0个开始到第n个全部选中
+                        2n或even 选中偶数项
+                        2n + 1或者odd   选中奇数项
+                        括号里指定值 1 2 3都可以
+        
+        以上所有伪类是针对所有子元素
+        :first-of-type
+        :last-of-type
+        :nth-of-type
+                        和上述一样 但只在同类中选中
+        
+        :not()    否定伪类  将符合条件的从选择器中去除
+
+    -->
+
+    <!-- <style>
+        ul > li:first-child{
+            color:red;
+        }
+
+        ul > li:last-child{
+            color:green;
+        }
+    </style> -->
+
+    <!-- <style>
+        ul > li:nth-child(even){
+            color:red;
+        }
+
+        ul > li:nth-child(odd){
+            color:blue;
+        }
+    </style> -->
+
+    <!-- <style>
+        ul > li:first-of-type{
+            color:red;
+        }
+
+        ul > li:last-of-type{
+            color:blue;
+        }
+
+        ul > li:nth-of-type(3){
+            color:yellow;
+        }
+    </style> -->
+
+    <style>
+        ul > *:not(:nth-child(3)){
+            color:red;
+        }
+        }
+    </style>
+
+
+</head>
+<body>
+    <ul>
+        <span>第零个</span>
+        <li>第一个</li>
+        <li>第二个</li>
+        <li>第三个</li>
+        <li>第四个</li>
+        <li>第五个</li>
+    </ul>
+
+    <p>第六个</p>
+</body>
+</html>

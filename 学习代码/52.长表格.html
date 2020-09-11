@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格</title>
+</head>
+<body>
+    <table border="1" width="50%" align="center">
+        <thead>                             <!-- thead表示表格的头部 -->
+                <th>A1</th>
+                <th>B1</th>                 <!-- th表示头部的一个单元格 -->
+                <th>C1</th>
+                <th>D1</th>
+        </thead>
+        <tbody>                             <!-- tbody表示表格的主体 -->
+            <tr>
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+                <td rowspan="2">D2</td>     <!-- rowspan表示纵向单元格合并 -->  
+            </tr>
+            <tr>
+                <td>A3</td>
+                <td>B3</td>
+                <td>C3</td>
+            </tr>
+            <tr>
+                <td>A4</td>
+                <td>B4</td>
+                <td colspan="2">C4</td>     <!-- colspan表示横向单元格合并 -->  
+            </tr>
+
+            <tfoot>                         <!-- tfoot表示表格的底部 -->
+                <td></td>
+                <td>B3</td>
+                <td>C3</td>
+                <td>C3</td>
+            </tfoot>
+        </tbody>
+    </table>
+</body>
+</html>

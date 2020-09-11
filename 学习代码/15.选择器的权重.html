@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>选择器的权重</title>
+		
+		<style>
+			div{
+				color:green;
+                font-size:20px;
+			}
+
+            *{
+                font-size:50px;
+            }
+			
+			.d2{
+				color:purple !important;
+			}
+			
+			.d3{
+				color:blue;
+			}
+			
+			
+		</style>
+		<!--
+			选择器的权重（优先级）
+			
+				内联样式	1.0.0.0
+				id选择器	0.1.0.0
+				类选择器	0.0.1.0
+				元素选择器	0.0.0.1
+				通配选择器	0.0.0.0
+				继承的样式	无权重
+				
+				当使用不同的选择器为相同的元素设置不同值的相同样式时 权重大的优先级生效
+				比较优先级时需要将所有选择器的权重加起来比较	选择器的累加不会超过其最大的数量级	类选择器再累加也不会超过id选择器
+                如果优先级累加相同	则最下边的生效
+                
+                在样式的后面加上!important 会使它的优先级变的最高 但慎用
+				
+		-->
+	</head>
+	<body>
+		<div id = "d1" class = "d2 d3 d4">我是一个div <span>我是div中的span元素</span></div>
+		<div>我是一个div <span>我是div中的span元素</span></div>
+		<div style="color:red;">我是一个div <span>我是div中的span元素</span></div>
+	</body>
+</html>

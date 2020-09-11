@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缩放</title>
+    <!-- 
+        缩放
+            transform:
+                scaleX()    
+                scaleY()
+                scaleZ()    必须开启3d模式
+                scale()     xy同时缩放
+            transform-origin:
+                变形的原点
+                    center  默认值
+                    0px 0px 可以自己指定
+     -->
+    <style>
+        .box1{
+            width:450px;
+            height:450px;
+            margin:200px auto;
+            border:1px solid black;
+            overflow:hidden;
+        }
+
+        img{
+            transition:transform 2s;
+        }
+
+        .box1:hover img{
+            transform:scale(1.1);
+            /* transform-origin:0px 0px; */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <img src="/img/1.png">
+    </div>
+</body>
+</html>

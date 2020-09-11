@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水平布局</title>
+
+    <!-- 
+        元素的水平布局
+            元素在其父元素中水平方向的位置由以下七个属性共同决定
+                margin-left
+                border-left
+                padding-left
+                width
+                padding-right
+                border-right
+                margin-right
+
+            一个元素在其父元素中必须满足以下等式
+                margin-left+border-left+padding-left+width+padding-right+border-right+margin-right = 其父元素内容区的宽度
+                    而且上述等式必须满足
+                    如果不满足称为过渡约束等式会自动调整
+                        调整情况：
+                            如果七个值没有auto的情况 浏览器会自动调整margin-right的值使等式成立
+
+                        这七个值中三个可以设置为auto
+                            width   如果不写width属性浏览器默认设置为auto
+                            margin-left
+                            margin-right
+                        
+                            如果那个值有auto浏览器就会调整这个值使得等式成立
+                            如果width 和一个外边距设置为auto    设置auto的外边距会调整到0 而宽度会调整到最大
+                            如果三个都设置为auto那么外边距会设置为0 宽度设置为最大
+                            如果两个外边距设置为auto那么外边距会设置为相同的值  水平居中的效果
+
+                    如果width超过了父元素的宽度 那么margin-right自动设置为负值
+
+                        
+                
+                0 + 0 + 0 + 200 + 0 + 0 + 0 = 800   过渡约束
+                0 + 0 + 0 + 200 + 0 + 0 + 600 = 800
+
+
+    -->
+
+    <style>
+        .outer{
+            /* width:800px; */
+            height:300px;
+            border:red 10px solid;
+        }
+
+        .inner{
+            width:200px;
+            height:300px;
+            background-color:black;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>
